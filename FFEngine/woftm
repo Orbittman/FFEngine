@@ -1,1 +1,20 @@
-{"description" : "This is the description", "pages" : {"format" : "Dict", "1" : {"text" : "This is the text for page one", "actions" : {"format": "Dict", "eat" : "Eat something", "sleep" : "Got to sleep"}}}}
+{
+	"description" : "This is the description", 
+	"pages" : {
+		"format" : "dict",
+		"1" : {
+			"text" : "This is the text for page one", 
+			"actions" : {
+				"format": "dict", 
+				"eat" : "Eat something", 
+				"sleep" : "Got to sleep"
+			},
+			"combats" : [{
+					"name" : "A nasty thing", 
+					"skill" : 10, 
+					"stamina" : 10 , 
+					"luck" : 10
+				}]
+		}
+	}
+}

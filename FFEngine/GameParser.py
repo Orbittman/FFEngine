@@ -7,13 +7,13 @@ class Enum(set):
             return name
         raise AttributeError
 
-Formats = Enum(["Dict", "Tuple"])
+Formats = Enum(["dict", "tuple"])
 
 def _json_object_hook(d): 
     if "format" in d:
-        if d["format"] == Formats.Dict:
+        if d["format"] == Formats.dict:
             return d
 
-    return namedtuple('x', d.keys())(*d.values())
+    return namedtuple('game', d.keys())(*d.values())
     
 def json2obj(data): return json.loads(data, object_hook=_json_object_hook)

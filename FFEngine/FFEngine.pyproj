@@ -26,5 +26,8 @@
     <Compile Include="GameEngine.py" />
     <Compile Include="GameParser.py" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="woftm" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
 </Project>
