@@ -11,8 +11,8 @@
 			},
 			"combats" : [{
 					"name" : "A nasty thing", 
-					"skill" : 10, 
-					"stamina" : 10 , 
+					"skill" : 8, 
+					"stamina" : 5 , 
 					"luck" : 10
 				}]
 		}
