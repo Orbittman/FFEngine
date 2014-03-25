@@ -12,6 +12,11 @@
     <OutputPath>.</OutputPath>
     <Name>FFEngine</Name>
     <RootNamespace>FFEngine</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>woftm</CommandLineArguments>
+    <InterpreterPath />
+    <InterpreterArguments />
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -25,6 +30,7 @@
     <Compile Include="FFEngine.py" />
     <Compile Include="GameEngine.py" />
     <Compile Include="GameParser.py" />
+    <Compile Include="placeholder" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="woftm" />

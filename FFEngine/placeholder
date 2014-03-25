@@ -1,0 +1,15 @@
+,
+		"5" : {
+			"text" : "This is the text for page five", 
+			"actions" : {
+				"format": "dict", 
+				"eat" : "Eat something", 
+				"sleep" : "Got to sleep"
+			},
+			"combats" : [{
+					"name" : "A nasty thing", 
+					"skill" : 8, 
+					"stamina" : 5 , 
+					"luck" : 10
+				}]
+		}

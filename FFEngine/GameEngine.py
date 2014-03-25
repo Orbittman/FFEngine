@@ -21,8 +21,12 @@ class GameRunner(object):
             combatResult = self.ProcessFight(page.combats)
 
         for action in page.actions:
-            if (action != "dict"):
-                print("{0} ({1})".format(page.actions[action], action))
+            if (action != "format"):
+                print("{0} ({1})".format(page.actions[action].text, action))
+
+        chosenAction = input(": ")
+        newPage = page.actions[chosenAction].page
+        self.ProcessPage(self.GetPage(self.Game.Data.pages, newPage))
 
     def ProcessFight(self, combats):
         for combat in combats:
@@ -34,6 +38,7 @@ class GameRunner(object):
 
     def GetCombatRollValue(self, skill):
         return skill + random.randint(1, 6)
+
 
 class Game():
     def __init__(self, game):
