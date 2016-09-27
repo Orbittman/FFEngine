@@ -2,7 +2,7 @@ import sys
 from GameEngine import GameRunner, Game
 
 def main():
-    gameName = sys.argv[1]
+    gameName = sys.argv[1] 
     gameFile = ""
 
     if gameName == None:
