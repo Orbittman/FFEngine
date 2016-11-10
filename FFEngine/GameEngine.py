@@ -1,7 +1,9 @@
-import GameParser
+"""The FF Game Engine"""
 import random
+import GameParser
 
 class GameRunner(object):
+    """ Game runner """
     def __init__(self):
         self.Game = None
 

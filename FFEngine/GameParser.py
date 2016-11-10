@@ -1,19 +1,23 @@
+""" Game data parser """
 import json
 from collections import namedtuple
 
 class Enum(set):
+    """ Enumeration class """
     def __getattr__(self, name):
         if name in self:
             return name
         raise AttributeError
 
-Formats = Enum(["dict", "tuple"])
+FORMATS = Enum(["dict", "tuple"])
 
-def _json_object_hook(d): 
-    if "format" in d:
-        if d["format"] == Formats.dict:
-            return d
+def _json_object_hook(element):
+    if "format" in element:
+        if element["format"] == FORMATS.dict:
+            return element
 
-    return namedtuple('game', d.keys())(*d.values())
-    
-def json2obj(data): return json.loads(data, object_hook=_json_object_hook)
+    return namedtuple('game', element.keys())(*element.values())
+
+def json2obj(data):
+    """ Json file loader """
+    return json.loads(data, object_hook=_json_object_hook)

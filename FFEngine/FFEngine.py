@@ -1,24 +1,27 @@
+"""The FF Engine"""
 import sys
+
 from GameEngine import GameRunner, Game
 
 def main():
-    gameName = sys.argv[1] 
-    gameFile = ""
+    """The FF Engine entry point"""
+    game_name = sys.argv[1]
+    game_file = ""
 
-    if gameName == None:
-        print("There was no game specified")
-        sys.exit
+    if game_name is None:
+        print "There was no game specified"
+        SystemExit("There was no game specified")
 
     try:
-        with open(gameName, 'r') as gameFile:
-            gameImport = gameFile.read()
-    except IOError as e:
-        print("I/O error({0}): {1}".format(e.errno, e.strerror))
+        with open(game_name, 'r') as game_file:
+            game_import = game_file.read()
+    except IOError as exception:
+        print "I/O error({0}): {1}".format(exception.errno, exception.strerror)
 
-    game = Game(gameImport)
+    game = Game(game_import)
 
-    gameRunner = GameRunner()
-    gameRunner.Run(game)
+    game_runner = GameRunner()
+    game_runner.Run(game)
 
 # main init #
 if __name__ == "__main__":
